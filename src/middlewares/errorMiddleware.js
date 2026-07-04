@@ -27,9 +27,8 @@ const globalErrorHandler = (err, req, res, next) => {
       .join(', ');
   }
 
-  if (process.env.NODE_ENV === 'development') {
-    console.error(err.stack);
-  }
+  console.error("ERROR:", err);
+console.error(err.stack);
 
   res.status(statusCode).json({ success: false, message });
 };
