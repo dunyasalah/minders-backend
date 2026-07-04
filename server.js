@@ -8,12 +8,8 @@ const connectDatabase = require("./src/config/database");
 
 const PORT = process.env.PORT || 5000;
 
-connectDatabase();
-
-if (process.env.NODE_ENV !== "production") {
+connectDatabase().then(() => {
   app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
   });
-}
-
-module.exports = app;
+});
