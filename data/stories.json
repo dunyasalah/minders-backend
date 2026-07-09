@@ -5,7 +5,7 @@
   "coverImage": "https://res.cloudinary.com/fvz4a6uj/image/upload/f_auto,q_auto/mozakerat_la_azkorha_ch3dij",
   "authorName": "محمد رشاد",
   "storyCase": "Identity",
-  "featured": true,
+  "featured": false,
   "isPublished":true
 },
 {
@@ -16,6 +16,6 @@
   "authorName":"سنا مصطفى",
   "storyCase": "Identity",
   "featured": true,
-  "isPublished":false
+  "isPublished":true
 }
 ]

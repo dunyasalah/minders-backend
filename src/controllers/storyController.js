@@ -41,6 +41,24 @@ const getAllStories = async (req, res, next) => {
       Story.countDocuments(filter),
     ]);
 
+    // DEBUG
+    const allStories = await Story.find();
+
+    console.log("========== ALL STORIES ==========");
+    console.log("Count:", allStories.length);
+
+    allStories.forEach((story) => {
+      console.log({
+        title: story.title,
+        isPublished: story.isPublished,
+        featured: story.featured,
+      });
+    });
+
+    console.log("========== RETURNED STORIES ==========");
+    console.log(stories.length);
+    // END DEBUG
+
     res.status(200).json({
       success: true,
       message: "Stories retrieved successfully",
